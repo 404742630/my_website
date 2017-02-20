@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>小Y-个人简历</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="小Y的个人简历-Bootstrap模板">
+        <meta name="author" content="3rd Wave Media">
+        <link rel="shortcut icon" href="/static/css/img/favicon_icon/cuuriculum_vitae_favicon.ico">
+
+        <link rel="stylesheet" href="/static/css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/fonts/font-awesome/font-awesome.css">
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+        <link rel="stylesheet" href="/static/css/github-activity/github-activity.css">
+
+        <link id="theme-style" rel="stylesheet" href="/static/css/dist/curriculum_vitae/index.css">
+
+        <script type="text/javascript" src="/static/js/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/js/bootstrap/bootstrap.min.js"></script>
+        <!-- github activity plugin -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+        <script type="text/javascript" src="/static/js/github-activity/github-activity.js"></script>
+        <!-- custom js -->
+        <script type="text/javascript" src="/static/js/dist/curriculum_vitae/index.js"></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <img class="profile-image img-responsive pull-left" src="/static/css/img/curriculum_vitae/avator.png">
+                <div class="profile-content pull-left">
+                    <h1 class="name">叶森伟</h1>
+                    <h2 class="desc">软件开发工程师</h2>
+                    <ul class="social list-inline">
+                        <li><a class="social-a" data-toggle="modal" data-target="#modal_qq" data-toggle="tooltip" data-placement="bottom" title="QQ"><i class="fa fa-qq"></i></a></li>
+                        <li><a class="social-a" data-toggle="modal" data-target="#modal_wechat" data-toggle="tooltip" data-placement="bottom" title="微信"><i class="fa fa-weixin"></i></a></li>
+                        <li><a class="social-a" href="https://github.com/404742630/my_website" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container sections-wrapper">
+            <div class="row">
+                <div class="primary col-md-8 col-sm-12 col-xs-12">
+                    <section class="about section">
+                        <div class="section-inner">
+                            <h2 class="heading">自我介绍</h2>
+                            <div class="content">
+                                <p>
+                                    叶森伟，籍贯浙江温州，2015年7月毕业于浙江工业大学之江学院。热爱技术，热爱编程，热爱生活。性格开朗活泼，
+                                    大心脏，心态好，有团队意识，喜欢简单直接的处理方式。周末喜欢做饭，喜欢乱逛，喜欢游戏，喜欢吃。
+                                    不善于文案，不善于设计，审美差。
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="work-proj section">
+                        <div class="section-inner">
+                            <h2 class="heading">工作项目经历</h2>
+                            <div class="content">
+                                <div class="item featured text-center">
+                                    <h3 class="title">大医在线-微信公众号</h3>
+                                    <p class="summary">一个基于大数据的用户健康数据查询、分析、解读、统计、管理的健康平台</p>
+                                    <div class="featured-image">
+                                        <img class="img-responsive project-image"
+                                             src="/static/css/img/curriculum_vitae/projects/project-featured.png"
+                                             alt="大医在线"/>
+                                    </div>
+                                    <div class="desc text-left">
+                                        <p>
+                                            基于医院患者报告数据的一个健康平台。使用JAVA编写底层数据接口代码，用
+                                            Python &amp; Webpy &amp; Pony &amp; Jinja2 &amp; Redis &amp; Celery做平台的数据处理、分析以及网站的搭建，
+                                            前端使用H5 &amp; CSS3 &amp; Zepto，适配移动端以及PC端。使用MySql数据库。快速迭代，
+                                            一般1-2周一个迭代的版本。
+                                        </p>
+                                        <p>
+                                            我的主要工作内容是编写Python部分的数据处理与分析以及网站的搭建的代码，以及前端的JS部分的代码，负责部分的数据库维护。
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr class="divider"/>
+                                <div class="item row">
+                                    <a class="col-md-4 col-sm-4 col-xs-12">
+                                        <img class="img-responsive project-image"
+                                             src="/static/css/img/curriculum_vitae/projects/bootstrap.png" alt="后台客服/运维网站的搭建"/>
+                                    </a>
+                                    <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                        <h3 class="title">后台客服/运维网站的搭建</h3>
+                                        <p>使用后台使用Python的Webpy框架以及Pony &amp; Jinja2 &amp; Redis &amp; Celery，前端使用H5 &amp; CSS3 &amp; Jquery &amp; BootStrap框架</p>
+                                        <p>我参与全部的开发内容，包括前端的页面以及样式编写、后端数据处理以及数据库配置。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="projects section">
+                        <div class="section-inner">
+                            <h2 class="heading">其他项目经历</h2>
+                            <div class="content">
+                                <div class="item">
+                                    <h3 class="title">
+                                        wxpython+py2exe 桌面程序
+                                        <span class="label label-theme">Open Source</span>
+                                    </h3>
+                                    <p class="summary">对接 德卡-Z9 读卡器，读取市民卡信息，并用信息中的姓名和身份证号调用接口去查找此人的一些信息，并提供导出功能。出错输出日志。</p>
+                                    <p><a class="more-link"
+                                          href="http://blog.leanote.com/post/404742630@qq.com/wxpython-py2exe-%E6%A1%8C%E9%9D%A2%E7%A8%8B%E5%BA%8F"
+                                          target="_blank"><i class="fa fa-external-link"></i> 浏览博客</a></p>
+                                </div>
+                                <div class="item">
+                                    <h3 class="title">
+                                        监控进程
+                                        <span class="label label-theme">Open Source</span>
+                                    </h3>
+                                    <p class="summary">在linux和windows系统中监控进程是否启动。 </p>
+                                    <p>
+                                        <a class="more-link"
+                                          href="http://blog.leanote.com/post/404742630@qq.com/%E7%9B%91%E6%8E%A7%E8%BF%9B%E7%A8%8B"
+                                          target="_blank"><i class="fa fa-external-link"></i> 浏览博客</a>
+                                    </p>
+                                </div>
+                                <div class="item">
+                                    <h3 class="title">
+                                        NSIS 安装包的制作
+                                        <span class="label label-theme">Open Source</span>
+                                    </h3>
+                                    <p class="summary">使用NSIS工具为程序打包，制作安装包，方便应用的配置以及部署。</p>
+                                    <p>
+                                        <a class="more-link"
+                                          href="http://blog.leanote.com/post/404742630@qq.com/%E6%89%93%E5%8C%85"
+                                          target="_blank"><i class="fa fa-external-link"></i> 浏览博客</a>
+                                    </p>
+                                </div>
+                                <a class="btn btn-cta-secondary" href="http://leanote.com/blog/5847a80cab6441378102809d">更多博客&nbsp;<i class="fa fa-chevron-right"></i></a>
+
+                            </div><!--//content-->
+                        </div><!--//section-inner-->
+                    </section>
+
+                    <section class="experience section">
+                        <div class="section-inner">
+                            <h2 class="heading">工作经验</h2>
+                            <div class="content">
+                                <div class="item">
+                                    <h3 class="title">实习生 & 软件开发工程师<span class="place">&nbsp;<a href="javascript:void(0);"
+                                                                                                target="_blank">杭州大医堂网络技术有限公司</a></span>
+                                        <span class="year">(2015 - 2017)</span></h3>
+                                    <p>负责微信端公众号的开发与维护，对接医院报告单系统，做报告单的查询、咨询、分析、统计以及对用户医疗数据的处理和分析，主要针对是杭州各个区的社区医院的用户。</p>
+                                </div>
+                                <div class="item">
+                                    <h3 class="title">实习生<span class="place">&nbsp;<a href="http://www.dazd.cn" target="_blank">浙江迪安诊断技术股份有限公司</a></span>
+                                        <span class="year">(2014- 2015)</span></h3>
+                                    <p>主要学习移动端网页以及后台的开发</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="github section">
+                        <div class="section-inner">
+                            <h2 class="heading">My GitHub</h2>
+                            <div id="ghfeed" class="ghfeed">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="secondary col-md-4 col-sm-12 col-xs-12">
+                    <section class="info section">
+                        <div class="section-inner">
+                            <h2 class="heading sr-only">基本信息</h2>
+                            <div class="content">
+                                <ul class="list-unstyled">
+                                    <li><i class="fa fa-map-marker"></i><span class="sr-only">地址:</span>浙江省杭州市
+                                    </li>
+                                    <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span>404742630@qq.com
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="skills section">
+                        <div class="section-inner">
+                            <h2 class="heading">技术栈</h2>
+                            <div class="content">
+                                <div class="skillset">
+                                    <div class="item">
+                                        <h3 class="level-title">Python &amp; Webpy &amp; Pony &amp; Jinja2
+                                            <span class="level-label"
+                                                  data-toggle="tooltip"
+                                                  data-placement="left"
+                                                  data-animation="true"
+                                                  title="工作以及自己编程时都在使用">熟练</span>
+                                        </h3>
+                                        <div class="level-bar">
+                                            <div class="level-bar-inner" data-level="85%">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <h3 class="level-title">Javascript &amp; jQuery &amp; Zepto
+                                            <span class="level-label"
+                                                  data-toggle="tooltip"
+                                                  data-placement="left"
+                                                  data-animation="true"
+                                                  title="工作以及自己编程时都在使用">熟练</span>
+                                        </h3>
+                                        <div class="level-bar">
+                                            <div class="level-bar-inner" data-level="75%">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <h3 class="level-title">HTML5, CSS3 &amp; Bootstrap
+                                            <span class="level-label"
+                                                  data-toggle="tooltip"
+                                                  data-placement="left"
+                                                  data-animation="true"
+                                                  title="工作中应用一般，平时自己编程时应用较多">熟悉</span>
+                                        </h3>
+                                        <div class="level-bar">
+                                            <div class="level-bar-inner" data-level="60%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="education section">
+                        <div class="section-inner">
+                            <h2 class="heading">教育经历</h2>
+                            <div class="content">
+                                <div class="item">
+                                    <h3 class="title">
+                                        <i class="fa fa-graduation-cap"></i>
+                                        计算机科学与技术（本科）
+                                    </h3>
+                                    <h4 class="university">浙江工业大学之江学院&nbsp;<span class="year">(2011-2015)</span></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="languages section">
+                        <div class="section-inner">
+                            <h2 class="heading">语言水平</h2>
+                            <div class="content">
+                                <ul class="list-unstyled">
+                                    <li class="item">
+                                        <span class="title"><strong>中文:</strong></span>
+                                        <span class="level">&nbsp;母语</span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="title"><strong>English:</strong></span>
+                                        <span class="level">&nbsp;CET-4</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+        <div class="container text-center">
+            <small class="copyright">
+                Designed with <i class="fa fa-heart"></i> by
+                <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a>
+                for developers
+            </small>
+        </div>
+    </footer>
+
+        <div class="modal fade" id="modal_qq" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img class="modal-img" src="/static/css/img/curriculum_vitae/qq.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal_wechat" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img class="modal-img" src="/static/css/img/curriculum_vitae/wechat.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+

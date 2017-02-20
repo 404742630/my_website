@@ -1,0 +1,10 @@
+local:
+  web_name: my_website_local
+
+
+test:
+  web_name: my_website_test
+
+
+deploy:
+  web_name: my_website_deploy

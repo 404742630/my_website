@@ -8,5 +8,5 @@ Created on 2017-02-16
 pre = __name__[:__name__.find('.', 11, -1) + 1]
 
 urls = [
-    "/index",           pre + 'index.Index',
+    "/index",           pre + "index.Index",
 ]

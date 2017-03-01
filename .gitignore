@@ -1,1 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
+*.pyc
+*.pyo
+
+.idea/*
+sessions/*
+db_sqlite/*

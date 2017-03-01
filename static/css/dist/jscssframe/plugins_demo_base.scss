@@ -1,0 +1,119 @@
+@charset "utf-8";
+$fontFamily: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$fontColor: #000 !default;
+$fontSize: 12px !default;
+$bgColor: #fff !default;
+$borderStyle: 1px solid #ddd !default;
+$iconTag: i !default;
+$screenMap: (xs: 767px, sm: 768px, md: 992px, slg: 1200px, mlg: 1500px, xlg: 2000px);
+$menuWidthMap: (xs: 0%, sm: 0%, md: 22%, slg: 18%, mlg: 14%, xlg: 10%);
+@mixin border-radius($radius:3px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+body {
+  font-family: $fontFamily;
+  overflow-x: hidden;
+  color: $fontColor;
+  background: $bgColor;
+  #{$iconTag}.right {
+    float: right;
+  }
+  #{$iconTag}.left {
+    float: left;
+  }
+  #{$iconTag}.link {
+    font-size: 70%;
+  }
+  #{$iconTag}.link {
+    & > a.glyphicon-link {
+      color: #000;
+      &:hover {
+        color: #337ab7;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    &:link {
+      text-decoration: none;
+    }
+    &:visited {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    &:active {
+      text-decoration: none;
+    }
+  }
+  textarea {
+    resize:none;
+  }
+  div.page-header {
+    & > h1, h2 {
+      font-weight: bold;
+    }
+  }
+  div.margin-top {
+    margin-top: 15px;
+  }
+  div.row {
+    & > div[role="menu"] {
+      margin-top: 40px;
+      & > nav.affix-top {
+        position: fixed;
+      }
+    }
+    & > div[role="main"] {
+      & > section {
+        & > div.base-example-div {
+          position: relative;
+          padding: 39px 19px 14px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          @include border-radius(4px);
+          &:after {
+            content: "Example";
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            padding: 3px 7px;
+            font-size: $fontSize;
+            font-weight: bold;
+            background-color: #f5f5f5;
+            border: $borderStyle;
+            color: #9da0a4;
+            @include border-radius(4px 0 4px 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+@each $key, $value in $screenMap {
+  @if $key == xs {
+    @media (max-width: $value) {
+      div.row {
+        & > div[role="menu"] {
+          & > nav.affix-top {
+            width: map_get($menuWidthMap, #{$key});
+          }
+        }
+      }
+    }
+  } @else {
+    @media (min-width: $value) {
+      div.row {
+        & > div[role="menu"] {
+          & > nav.affix-top {
+            width: map_get($menuWidthMap, #{$key});
+          }
+        }
+      }
+    }
+  }
+}

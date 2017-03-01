@@ -25,4 +25,4 @@ srv = yaml.load(file(os_path + "/srv.yml", "r"))[run_mode]
 
 error = yaml.load(file(os_path + "/error.yml", "r"))
 
-vesion = "0.0.2"
+vesion = "0.0.3"

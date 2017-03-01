@@ -75,23 +75,5 @@ body {
 @media (min-width: 2000px) {
   div.row > div[role="menu"] > nav.affix-top {
     width: 10%; } }
-#demo_li_marquee #limarquee {
-  width: 100%;
-  height: 100px;
-  margin: 15px auto;
-  font-size: 0; }
-  #demo_li_marquee #limarquee img {
-    margin-left: 10px;
-    height: 100%; }
 
-#demo_unslider #unslider > ul > li > img {
-  width: 100%; }
-
-#demo_hammer #hammer {
-  height: 100px;
-  background: #d4d4d4;
-  font-size: 18px;
-  text-align: center;
-  line-height: 100px; }
-
-/*# sourceMappingURL=plugins_by_other_demo.css.map */
+/*# sourceMappingURL=plugins_demo_base.css.map */

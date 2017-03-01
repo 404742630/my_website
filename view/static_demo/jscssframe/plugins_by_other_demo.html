@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>第三方轮子</title>
+    <link rel="shortcut icon" href="../../../static/css/img/favicon_icon/cuuriculum_vitae_favicon.ico">
+    <link href="../../../static/css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="../../../static/css/bootstrap/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="../../../static/css/bootstrap/fileinput.css" rel="stylesheet">
+    <link href="../../../static/css/plugins/liMarquee.css" rel="stylesheet">
+    <link href="../../../static/css/plugins/wangEditor.css" rel="stylesheet">
+    <link href="../../../static/css/jquery/unslider.css" rel="stylesheet">
+    <link href="../../../static/css/jquery/unslider-dots.css" rel="stylesheet">
+    <link href="../../../static/css/dist/jscssframe/plugins_by_other_demo.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../../../static/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="../../../static/js/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../static/js/bootstrap/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="../../../static/js/bootstrap/bootstrap-datetimepicker.zh-CN.js"></script>
+
+    <script type="text/javascript" src="../../../static/js/bootstrap/fileinput.js"></script>
+    <script type="text/javascript" src="../../../static/js/bootstrap/fileinput.zh-CN.js"></script>
+
+    <script type="text/javascript" src="../../../static/js/bootstrap/bootstrap3-typeahead.js"></script>
+
+    <script type="text/javascript" src="../../../static/js/jquery/jquery.liMarquee.js"></script>
+
+    <script type="text/javascript" src="../../../static/js/plugins/wangEditor.js"></script>
+
+    <script type="text/javascript" src="../../../static/js/jquery/unslider.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>第三方轮子
+            <small>附带demo标准模板样式</small>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs menu" role="menu" id="menu">
+            <nav class="affix-top">
+                <ul class="nav nav-pills nav-stacked" id="menu_ul">
+                    <li class="active"><a href="#demo_datetime_picker">DateTime Picker<i
+                            class="glyphicon glyphicon-chevron-right right"></i></a></li>
+                    <li><a href="#demo_file_input">File Input<i
+                            class="glyphicon glyphicon-chevron-right right"></i></a></li>
+                    <li><a href="#demo_typeahead">Typeahead<i
+                            class="glyphicon glyphicon-chevron-right right"></i></a></li>
+                    <li><a href="#demo_li_marquee">LI Marquee<i
+                            class="glyphicon glyphicon-chevron-right right"></i></a></li>
+                    <li><a href="#demo_wang_editor">Wang Editor<i
+                            class="glyphicon glyphicon-chevron-right right"></i></a></li>
+                    <li><a href="#demo_unslider">Unslider<i
+                            class="glyphicon glyphicon-chevron-right right"></i></a></li>
+                    <li><a href="#demo_hammer">Hammer<i
+                            class="glyphicon glyphicon-chevron-right right"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" role="main">
+            <section id="demo_datetime_picker">
+                <div class="page-header">
+                    <h2>
+                        DateTime Picker
+                        <span class="link">
+                            <a class="glyphicon glyphicon-link" target="_blank"
+                               href="http://www.bootcss.com/p/bootstrap-datetimepicker/"></a>
+                        </span>
+                    </h2>
+                </div>
+                <div class="base-example-div">
+                    <p>时间选择控件</p>
+                    <div class="input-group col-xs-12 col-sm-8 col-md-6 col-lg-6">
+                        <input class="form-control" type="text" value="" id="datetimepicker" readonly>
+                        <span class="input-group-addon" id="datetimepicker_clear"><span
+                                class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon" id="datetimepicker_show"><span
+                                class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                    <div class="code margin-top">
+                        <pre>
+
+    $("#datetimepicker").datetimepicker({
+        format: "yyyy-mm-dd",  // 输出日期的格式
+        weekStart: 1,  // 一周开始时间 0为周日
+        startDate: new Date("2017", "0", "1"),  // 开始时间
+        endDate: new Date(),  // 结束时间
+        daysOfWeekDisabled: [0, 3],  // 设置不可选的星期 此处为周日和周三不可选
+        autoclose: true,  // 选择完后关闭日历
+        startView: 2,  // 打开后开始的视图 0 hour 1 day 2 month 3 year 4 decade
+        minView: 2,
+        maxView: 2,
+        todayBtn: true,  // 今天按钮
+        todayHighlight: true,  // 今天按钮高亮
+        keyboardNavigation: true,  // 允许键盘选择
+        language: "zh-CN",  // 语言
+        minuteStep: 10,  // 选择分钟时的步进
+        pickerPosition: "bottom-left",  // 日历出现在控件右边
+        initialDate: new Date()
+    });
+    $("#datetimepicker_clear").click(function () {
+        $("#datetimepicker").val("");
+    });
+    $("#datetimepicker_show").click(function () {
+        $("#datetimepicker").datetimepicker("show");
+    });
+                        </pre>
+                    </div>
+                </div>
+            </section>
+            <section id="demo_file_input">
+                <div class="page-header">
+                    <h2>
+                        File Input
+                        <span class="link">
+                            <a class="glyphicon glyphicon-link" target="_blank"
+                               href="http://plugins.krajee.com/file-input"></a>
+                        </span>
+                    </h2>
+                </div>
+                <div class="base-example-div">
+                    <p>文件上传插件</p>
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input id="fileinput" type="file" multiple>
+                    </div>
+                    <div class="code margin-top">
+                        <pre>
+
+    $("#fileinput").fileinput({
+        language: "zh",
+        allowedFileExtensions: ["jpg", "png", "jpeg", "gif"],
+        allowedFileTypes: ["image"],
+        uploadUrl: "#",
+        deleteUrl: "#",
+        maxFileSize: 1000,  // 单个文件的大小 KB
+        maxFileCount: 2,
+        showClose: false,
+        uploadAsync: false,  // 对于多个文件是否异步上传
+        previewSettings: {
+            image: {width: "auto", height: "90px"},
+        },
+    });
+                        </pre>
+                    </div>
+                </div>
+            </section>
+            <section id="demo_typeahead">
+                <div class="page-header">
+                    <h2>
+                        Typeahead
+                        <span class="link">
+                            <a class="glyphicon glyphicon-link" target="_blank"
+                               href="https://github.com/bassjobsen/Bootstrap-3-Typeahead"></a>
+                        </span>
+                    </h2>
+                </div>
+                <div class="base-example-div">
+                    <p>自动完成输入</p>
+                    <div class="input-group col-lg-5 col-md-5 col-sm-8 col-xs-12">
+                        <span class="input-group-addon" id="basic-addon1">AutoComplate</span>
+                        <input type="text" class="form-control" id="typeahead" data-provide="typeahead"
+                               autocomplete="off">
+                    </div>
+                    <div class="code margin-top">
+                        <pre>
+
+    $("#typeahead").typeahead({
+        source: [……],
+        autoSelect: true,
+        items: 5
+    });
+                        </pre>
+                    </div>
+                </div>
+            </section>
+            <section id="demo_li_marquee">
+                <style>
+                    #limarquee {
+                        width: 100%;
+                        height: 100px;
+                        margin: 15px auto;
+                        font-size: 0;
+                    }
+
+                    #limarquee img {
+                        margin-left: 10px;
+                        height: 100%;
+                    }
+                </style>
+                <div class="page-header">
+                    <h2>
+                        liMarquee(可作进阶)
+                    </h2>
+                </div>
+                <div class="base-example-div">
+                    <p>自动滚动优化</p>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="limarquee">
+                        <img src="../../../static/css/img/jscssframe/limarquee/1.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/2.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/3.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/4.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/5.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/6.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/7.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/8.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/9.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/10.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/11.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/12.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/13.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/14.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/15.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/16.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/17.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/18.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/19.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/20.png" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/21.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/22.jpg" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/23.png" alt="">
+                        <img src="../../../static/css/img/jscssframe/limarquee/24.png" alt="">
+                    </div>
+                    <div class="code margin-top">
+                        <pre>
+
+    $("#limarquee").liMarquee({
+        direction: "left",
+        loop: -1,
+        scrolldelay: 0,
+        scrollamount: 60,
+        circular: true,  // 无缝滚动
+        drag: true,  // 鼠标可拖动
+        hoverstop: false,  // 鼠标悬停
+    });
+                        </pre>
+                    </div>
+                </div>
+            </section>
+            <section id="demo_wang_editor">
+                <div class="page-header">
+                    <h2>
+                        Wang Editor
+                        <span class="link">
+                            <a class="glyphicon glyphicon-link" target="_blank"
+                               href="http://www.kancloud.cn/wangfupeng/wangeditor2/113961"></a>
+                        </span>
+                    </h2>
+                </div>
+                <div class="base-example-div">
+                    <p>文本编辑器</p>
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12" id="wang_editor_container">
+                        <div id="wang_editor" class="editor">
+                        </div>
+                    </div>
+                    <div class="btn-group margin-top" id="wang_editor_button">
+                        <button type="button" class="btn btn-default">初始化</button>
+                        <button type="button" class="btn btn-default">获取html</button>
+                        <button type="button" class="btn btn-default">获取text</button>
+                        <button type="button" class="btn btn-default">追加内容</button>
+                        <button type="button" class="btn btn-default">清空内容</button>
+                        <button type="button" class="btn btn-default">禁用/启用</button>
+                    </div>
+                    <div class="input-group margin-top col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <textarea id="wang_editor_textarea" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5"
+                                  readonly style="resize:none"></textarea>
+                    </div>
+                    <div class="code margin-top">
+                        <pre>
+
+    var wang_editor = new wangEditor("wang_editor");
+    wang_editor.create();
+    $("#wang_editor_button").find("button").click(function () {
+        switch ($(this).index()) {
+            case 0:
+                wang_editor.$txt.html("&lt;p&gt;要初始化的内容&lt;/p&gt;");
+                break;
+            case 1:
+                $("#wang_editor_textarea").val(wang_editor.$txt.html());
+                break;
+            case 2:
+                $("#wang_editor_textarea").val(wang_editor.$txt.text());
+                break;
+            case 3:
+                wang_editor.$txt.append("&lt;p&gt;要追加的内容&lt;/p&lt;");
+                break;
+            case 4:
+                wang_editor.clear();
+                break;
+            case 5:
+                if ($("#wang_editor_container").find(".menu-item.clearfix").find("a.disable").length) {
+                    wang_editor.enable();
+                } else {
+                    wang_editor.disable();
+                }
+                break;
+            default:
+                break;
+        };
+    });
+                        </pre>
+                    </div>
+                </div>
+            </section>
+            <section id="demo_unslider">
+                <div class="page-header">
+                    <h2>
+                        Unslider
+                        <span class="link">
+                            <a class="glyphicon glyphicon-link" target="_blank"
+                               href="http://unslider.com/"></a>
+                        </span>
+                    </h2>
+                </div>
+                <div class="base-example-div">
+                    <p>图片轮播</p>
+                    <style>
+                        #unslider > ul > li > img {
+                            width: 100%;
+                        }
+                    </style>
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div id="unslider">
+                            <ul>
+                                <li>
+                                    <img src="../../../static/css/img/jscssframe/limarquee/1.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../../static/css/img/jscssframe/limarquee/2.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../../static/css/img/jscssframe/limarquee/3.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../../static/css/img/jscssframe/limarquee/4.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../../static/css/img/jscssframe/limarquee/5.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../../static/css/img/jscssframe/limarquee/6.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../../static/css/img/jscssframe/limarquee/7.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../../static/css/img/jscssframe/limarquee/8.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../../static/css/img/jscssframe/limarquee/9.jpg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn-group margin-top" id="unslider_button">
+                        <input type="button" class="btn btn-default" value="左">
+                        <input type="button" class="btn btn-default" value="右">
+                        <input type="tel" class="btn btn-default" maxlength="1" placeholder="输入跳转第几页">
+                        <input type="button" class="btn btn-default" value="开始">
+                        <input type="button" class="btn btn-default" value="停止">
+                    </div>
+                    <div class="code margin-top">
+                        <pre>
+
+    var slider = $("#unslider").unslider({
+        autoplay: true,
+        speed: 500,  // 滚动时间
+        delay: 2000,  // 轮播间隔
+        index: 0,   // 初始图片
+        animation: "vertical",  // 动画 fade模式需要arrows flase 设置高度
+        arrows: true,  // 左右箭头
+        infinite: true,  // 循环
+        key: false,  // 是否支持键盘
+        nav: true,  // 是否有排序小点
+    });
+    $("#unslider_button").find("input").click(function () {
+        switch ($(this).index()) {
+            case 0:
+                slider.data("unslider").prev();
+                break;
+            case 1:
+                slider.data("unslider").next();
+                break;
+            case 3:
+                slider.data("unslider").start();
+                break;
+            case 4:
+                slider.data("unslider").stop();
+                break;
+            default:
+                break;
+        };
+    });
+    $("#unslider_button").find("input")[2].addEventListener("keydown", function() {
+        $(this).val("");
+    });
+    $("#unslider_button").find("input")[2].addEventListener("keyup", function() {
+        slider.data("unslider").animate($(this).val());
+    });
+                        </pre>
+                    </div>
+                </div>
+            </section>
+            <section id="demo_hammer">
+                <div class="page-header">
+                    <h2>
+                        Hammer
+                        <span class="link">
+                            <a class="glyphicon glyphicon-link" target="_blank"
+                               href="http://hammerjs.github.io/"></a>
+                        </span>
+                    </h2>
+                </div>
+                <div class="base-example-div">
+                    <p>多点触控插件</p>
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    </div>
+                    <div class="code margin-top">
+                        <pre>
+
+                        </pre>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("body").scrollspy({
+            target: "#menu",
+            offset: 200
+        })
+
+        $("#menu_ul > li").click(function () {
+            $(this).siblings().removeClass("active");
+            $(this).addClass("active");
+        })
+
+        $("#datetimepicker").datetimepicker({
+            format: "yyyy-mm-dd",  // 输出日期的格式
+            weekStart: 1,  // 一周开始时间 0为周日
+            startDate: new Date("2017", "0", "1"),  // 开始时间
+            endDate: new Date(),  // 结束时间
+            daysOfWeekDisabled: [0, 3],  // 设置不可选的星期 此处为周日和周三不可选
+            autoclose: true,  // 选择完后关闭日历
+            startView: 2,  // 打开后开始的视图 0 hour 1 day 2 month 3 year 4 decade
+            minView: 2,
+            maxView: 2,
+            todayBtn: true,  // 今天按钮
+            todayHighlight: true,  // 今天按钮高亮
+            keyboardNavigation: true,  // 允许键盘选择
+            language: "zh-CN",  // 语言
+            minuteStep: 10,  // 选择分钟时的步进
+            pickerPosition: "bottom-left",  // 日历出现在控件右边
+            initialDate: new Date()
+        });
+        $("#datetimepicker_clear").click(function () {
+            $("#datetimepicker").val("");
+        });
+        $("#datetimepicker_show").click(function () {
+            $("#datetimepicker").datetimepicker("show");
+        });
+
+        $("#fileinput").fileinput({
+            language: "zh",
+            allowedFileExtensions: ["jpg", "png", "jpeg", "gif"],
+            allowedFileTypes: ["image"],
+            uploadUrl: "#",
+            deleteUrl: "#",
+            maxFileSize: 1000,  // 单个文件的大小 KB
+            maxFileCount: 2,
+            showClose: false,
+            uploadAsync: false,  // 对于多个文件是否异步上传
+            previewSettings: {
+                image: {width: "auto", height: "90px"},
+            },
+        });
+
+        $("#typeahead").typeahead({
+            source: [
+                "asd",
+                "asdasd",
+                "asdq",
+                "阿斯顿",
+                "asd",
+                "asdasd",
+                "asdq",
+                "阿斯顿",
+                "asd",
+                "asdasd",
+                "asdq",
+                "阿斯顿"
+            ],
+            autoSelect: true,
+            items: 5
+        });
+
+        $("#limarquee").liMarquee({
+            direction: "left",
+            loop: -1,
+            scrolldelay: 0,
+            scrollamount: 60,
+            circular: true,  // 无缝滚动
+            drag: true,  // 鼠标可拖动
+            hoverstop: false,  // 鼠标悬停
+        });
+
+        var wang_editor = new wangEditor("wang_editor");
+        wang_editor.create();
+        $("#wang_editor_button").find("button").click(function () {
+            switch ($(this).index()) {
+                case 0:
+                    wang_editor.$txt.html("<p>要初始化的内容</p>");
+                    break;
+                case 1:
+                    $("#wang_editor_textarea").val(wang_editor.$txt.html());
+                    break;
+                case 2:
+                    $("#wang_editor_textarea").val(wang_editor.$txt.text());
+                    break;
+                case 3:
+                    wang_editor.$txt.append("<p>要追加的内容</p>");
+                    break;
+                case 4:
+                    wang_editor.clear();
+                    break;
+                case 5:
+                    if ($("#wang_editor_container").find(".menu-item.clearfix").find("a.disable").length) {
+                        wang_editor.enable();
+                    } else {
+                        wang_editor.disable();
+                    }
+                    break;
+                default:
+                    break;
+            };
+        });
+
+        var slider = $("#unslider").unslider({
+            autoplay: true,
+            speed: 500,  // 滚动时间
+            delay: 2000,  // 轮播间隔
+            index: 0,   // 初始图片
+            animation: "vertical",  // 动画 fade模式需要arrows flase 设置高度
+            arrows: true,  // 左右箭头
+            infinite: true,  // 循环
+            key: false,  // 是否支持键盘
+            nav: true,  // 是否有排序小点
+        });
+        $("#unslider_button").find("input").click(function () {
+            switch ($(this).index()) {
+                case 0:
+                    slider.data("unslider").prev();
+                    break;
+                case 1:
+                    slider.data("unslider").next();
+                    break;
+                case 3:
+                    slider.data("unslider").start();
+                    break;
+                case 4:
+                    slider.data("unslider").stop();
+                    break;
+                default:
+                    break;
+            };
+        });
+        $("#unslider_button").find("input")[2].addEventListener("keydown", function() {
+            $(this).val("");
+        });
+        $("#unslider_button").find("input")[2].addEventListener("keyup", function() {
+            slider.data("unslider").animate($(this).val());
+        });
+    })
+</script>
+</body>
+</html>

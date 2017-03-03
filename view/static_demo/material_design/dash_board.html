@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../static/css/img/favicon_icon/cuuriculum_vitae_favicon.ico">
+    <link rel="stylesheet" href="../../../static/css/material_design_lite/material.css">
+    <link rel="stylesheet" href="../../../static/css/material_design_lite/material.icons.css">
+    <script src="../../../static/js/material_design_lite/material.js"></script>
+</head>
+<body>
+<form method="get" action="#" id="form">
+    <input type="text" id="b">
+    <input type="button" id="a" style="display: none;" value="display">
+</form>
+<script>
+    var form = document.getElementById("form");
+    form.addEventListener("submit", function () {
+        console.log(1);
+        document.getElementById("a").style.display = "block";
+        document.getElementById("a").focus();
+        return false;
+    })
+    document.getElementById("a").onclick = function() {
+        document.getElementById("b").focus();
+    }
+</script>
+</body>
+</html>

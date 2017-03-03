@@ -12,12 +12,23 @@ session = web.config._session
 render = base.render(__file__, "static_demo")
 
 
-class Bootstrap:
+class PluginsByOthers:
     """
-    Bootstrap
+    PluginsByOthers
     GET()
 
     """
 
     def GET(self):
         return render.plugins_by_other_demo()
+
+
+class PluginsByMe:
+    """
+    PluginsByMe
+    GET()
+
+    """
+
+    def GET(self):
+        return render.plugins_by_me_demo()

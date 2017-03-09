@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+.mdl-layout__header {
+  background-color: #FAFAFA;
+  border-bottom: 1px solid #e5e5e5;
+  color: #5c5c5c;
+  transition-property: all;
+  .mdl-layout__drawer-button {
+    color: #5c5c5c;
+  }
+  .mdl-layout__header-row {
+    .mdl-navigation {
+      & > div {
+        margin: 0 5px;
+      }
+      & > .mdl-textfield {
+        padding: 0;
+      }
+      & > .mdl-textfield--expandable .mdl-button--icon {
+        top: 0;
+      }
+      & > .mdl-textfield .mdl-button {
+        bottom: 0;
+      }
+      & > .mdl-badge.mdl-badge--overlap:after {
+        right: 0px;
+      }
+      & > .mdl-badge[data-badge]:after {
+        top: 0px;
+        width: 13px;
+        height: 13px;
+      }
+      & > .mdl-chip {
+        background-color: transparent;
+        padding: 8px 0 8px 8px;
+      }
+    }
+    .mdl-chip__text {
+      max-width: 100px;
+      overflow: hidden;
+      word-wrap: break-word;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    ul.mdl-menu.mdl-js-menu.mdl-menu--bottom-right.mdl-list {
+      & > li {
+        .mdl-badge.mdl-badge--overlap:after {
+          right: -3px;
+        }
+        .mdl-badge[data-badge]:after {
+          top: -3px;
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+}
+
+.mdl-layout__drawer {
+  color: #48525B;
+  transition: all .2s;
+  .mdl-layout-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+      margin-right: 15px;
+      transform: rotate(0deg);
+      transition: all .2s;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+  .mdl-navigation {
+    .mdl-navigation__link.active {
+      background-color: rgb(224,224,224);
+    }
+  }
+}
+
+.mdl-layout__drawer.active {
+  color: #BBBBBB;
+  transition: all .2s;
+  background-color: #48525B;
+  box-shadow: 2px 0 16px 0 rgba(0,0,0,0.3);
+  .mdl-layout-title {
+    i {
+      transform: rotate(90deg);
+      transition: all .2s;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  .mdl-navigation {
+    .mdl-navigation__link {
+      color: #BBBBBB;
+      &:hover {
+        background-color: #383F45;
+        color: #fff;
+      }
+    }
+    .mdl-navigation__link.active {
+      background-color: #383F45;
+      color: #fff;
+    }
+  }
+}
+
+.mdl-layout__content {
+  transition: all 1s;
+}
+

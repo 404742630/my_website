@@ -110,6 +110,34 @@
 }
 
 .mdl-layout__content {
-  transition: all 1s;
+  transition: all .2s;
+  section.mdl-grid {
+    margin: 2.5% 5%;
+    transition: all .5s;
+    div.mdl-cell {
+      margin-top: 10px;
+      .mdl-card {
+        margin: 15px auto;
+        max-width: 80%;
+        width: 600px;
+        & > .mdl-card__title {
+          padding: 0;
+          & > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    div.mdl-cell.delete {
+      opacity: 0;
+    }
+  }
+  @media (max-width: 479px) {
+    section.mdl-grid {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 }
 

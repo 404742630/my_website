@@ -20,4 +20,10 @@ class DashBoard:
     """
 
     def GET(self):
-        return render.dash_board()
+        data = web.input()
+        type = data.get("type", "1")
+        dist_render = {
+            "1": render.dash_board(),
+            "2": render.dash_board_advanced()
+        }
+        return dist_render[type]
